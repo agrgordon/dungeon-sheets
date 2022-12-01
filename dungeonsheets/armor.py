@@ -223,6 +223,10 @@ class ElvenChain(MediumArmor):
     dexerity_mod_max = 2
     weight = 20
 
+class MageArmor(Armor):
+    name = "Armor of Shadows"
+    base_armor_class = 13
+
 
 light_armors = [PaddedArmor, LeatherArmor, StuddedLeatherArmor]
 medium_armors = [HideArmor, ChainShirt, ScaleMail, Breastplate, HalfPlate]
