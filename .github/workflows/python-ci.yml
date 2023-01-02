@@ -12,14 +12,14 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        python-version: ['3.6', '3.7', '3.8', '3.9', '3.10']
+        python-version: ['3.7', '3.8', '3.9', '3.10', '3.11']
 
     steps:
     - uses: actions/checkout@v2
     - name: Set up required system dependencies
       run: sudo apt-get -y install pdftk texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4.0.0
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
         cache: pip
